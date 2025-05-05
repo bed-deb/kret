@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zjeb</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('https://i.imgur.com/LcJl6BF.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: pink;
+            text-align: center;
+        }
+        .center-text {
+            margin-top: 20vh;
+            font-size: 3em;
+            text-shadow: 2px 2px 4px #000;
+        }
+        .toggle-button {
+            margin-top: 50px;
+            padding: 10px 20px;
+            background-color: pink;
+            border: none;
+            color: black;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 8px;
+            margin: 10px;
+        }
+        .hidden-content {
+            display: none;
+            margin-top: 20px;
+            background-color: rgba(255, 192, 203, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cennik-text {
+            color: black;
+        }
+        .insta-icon {
+            width: 50px;
+            margin-top: 20px;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+    <script>
+        function toggleVisibility(id) {
+            const el = document.getElementById(id);
+            if (el.style.display === "none" || el.style.display === "") {
+                el.style.display = "block";
+            } else {
+                el.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div class="center-text">
+        Nazywam się Kuba. Lubię brać z dupy do pyska😁.
+      
+    </div>
+
+    <button class="toggle-button" onclick="toggleVisibility('kontakt')">Kontakt</button>
+    <div id="kontakt" class="hidden-content">
+        <a href="https://www.instagram.com/kasprzykj35?igsh=eXRieDZmbWJpYno3" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" class="insta-icon">
+        </a>
+        <br>
+        <a href="https://www.facebook.com/share/1Babx6pY1E/?mibextid=wwXIfr" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" class="insta-icon">
+        </a>
+        <br>
+        <a href="tel:+48570777458">
+            <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Telefon" class="insta-icon">
+            <div style="color:black; font-weight: bold;">+48 534 410 980</div>
+        </a>
+    </div>
+
+    <button class="toggle-button" onclick="toggleVisibility('cennik')">Cennik</button>
+    <div id="cennik" class="hidden-content cennik-text">
+        <p><strong>Cennik Kreta:</strong></p>
+        <ul style="list-style-type: none; padding: 0;">
+            <li>75 zł- w mordę z wykończeniem solidnym do kinola w obydwie dziury plus nagranie</li>
+            <li>50 zł- w dupe z zakończeniem na bryle</li>
+            <li>100 zł- z dupy do ryja+nagranie</li>
+            <li>20 zł- złoty deszczyk</li>
+        </ul>
+    </div>
+
+</body>
+</html>
